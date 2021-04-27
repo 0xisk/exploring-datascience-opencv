@@ -16,4 +16,17 @@ cv.imshow('Red Blank', blank)
 blank[200:300, 300:400] = 0, 255, 0
 cv.imshow('Cut Blank', blank)
 
+# 2. Draw a Rectangle
+cv.rectangle(blank, (0, 0), (250, 250), (0, 255, 0), thickness=2)
+cv.imshow('Rectangle Blank', blank)
+
+cv.rectangle(blank, (0, 0), (250, 250), (0, 255, 0), thickness=cv.FILLED)
+cv.imshow('Filled Rectangle Blank', blank)
+
+cv.rectangle(blank, (0, 0), (250, 250), (0, 255, 0), thickness=-1)
+cv.imshow('Filled Rectangle Blank', blank)
+
+cv.rectangle(blank, (0, 0), (blank.shape[1]//2, blank.shape[0]//2), (0, 255, 0), thickness=-1)
+cv.imshow('Filled Rectangle Blank with black.shape dimensions', blank)
+
 cv.waitKey(0)
