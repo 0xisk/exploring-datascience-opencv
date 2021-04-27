@@ -1,6 +1,15 @@
 import cv2 as cv 
 
+
 def rescale_frame(frame, scale=0.75):
+    """ This Rescaling function is working for
+    Images, Videos, and Live Video
+
+    :param frame:
+    :param scale:
+    :return:
+    """
+
     # frame.shape[1] = frame width
     width = int(frame.shape[1] * scale)
     # frame.shape[0] = frame height
@@ -9,6 +18,17 @@ def rescale_frame(frame, scale=0.75):
     dimensions = (width, height)
 
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
+
+
+def change_resolution(width, height):
+    """ This function used for Live Videos, like reading from
+    external camera, or web cam.
+
+    :param width:
+    :param height:
+    """
+    capture.set(3, width)
+    capture.set(4, height)
 
 
 # Rescaling Images
