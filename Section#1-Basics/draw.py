@@ -12,4 +12,8 @@ cv.imshow('Green Blank', blank)
 blank[:] = 0, 0, 255
 cv.imshow('Red Blank', blank)
 
+# Cutting a certain portion of the image
+blank[200:300, 300:400] = 0, 255, 0
+cv.imshow('Cut Blank', blank)
+
 cv.waitKey(0)
