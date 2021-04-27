@@ -40,4 +40,8 @@ cv.imshow('Thick Circle Blank', blank)
 cv.line(blank, (0, 0), (blank.shape[1]//2, blank.shape[0]//2), (255, 255, 255), thickness=3)
 cv.imshow('Line Blank', blank)
 
+# 5. Write text
+cv.putText(blank, 'ARTIX', (225, 225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0, 0, 3), thickness=2)
+cv.imshow('Text Blank', blank)
+
 cv.waitKey(0)
