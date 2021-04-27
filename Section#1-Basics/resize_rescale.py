@@ -1,9 +1,5 @@
 import cv2 as cv 
 
-# img = cv.imread('./Resources/Photos/cat_large.jpg')
-# cv.imshow('Cat', img)
-
-
 def rescale_frame(frame, scale=0.75):
     # frame.shape[1] = frame width
     width = int(frame.shape[1] * scale)
@@ -15,7 +11,16 @@ def rescale_frame(frame, scale=0.75):
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
 
-# Reading Videos
+# Rescaling Images
+img = cv.imread('./Resources/Photos/cat.jpg')
+resized_image = rescale_frame(img)
+
+cv.imshow('Cat', img)
+cv.imshow('Cat Resized', resized_image)
+
+cv.waitKey(0)
+
+# Rescaling Videos
 # You can use int 0 for referencing to webcam
 capture = cv.VideoCapture('./Resources/Videos/dog.mp4')
 
