@@ -11,4 +11,8 @@ cv.imshow('Gray Image', gray)
 blurImg = cv.blur(img, (50, 50))
 cv.imshow('blurred image', blurImg)
 
+# Converting to Gaussian Blur
+gaussianBlur = cv.GaussianBlur(img, (3, 3), cv.BORDER_DEFAULT)
+cv.imshow('Blur', gaussianBlur)
+
 cv.waitKey(0)
