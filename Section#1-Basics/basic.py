@@ -15,4 +15,8 @@ cv.imshow('blurred image', blurImg)
 gaussianBlur = cv.GaussianBlur(img, (3, 3), cv.BORDER_DEFAULT)
 cv.imshow('Blur', gaussianBlur)
 
+# Edge Cascade
+canny = cv.Canny(img, 125, 175)
+cv.imshow('Canny Edges', canny)
+
 cv.waitKey(0)
