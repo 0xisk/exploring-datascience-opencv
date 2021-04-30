@@ -22,5 +22,28 @@ cv.imshow('Translated', translated)
 translated = translate(img, -100, 100)
 cv.imshow('Translated', translated)
 
+# Rotation
+def rotate(img, angle, rot_point=None):
+    (height, width) = img.shape[:2]
+
+    if rot_point is None:
+        rot_point = (width//2, height//2)
+
+    rot_mat = cv.getRotationMatrix2D(rot_point, angle, 1.0)
+    dimensions = (width, height)
+
+    return cv.warpAffine(img, rot_mat, dimensions)
+
+# + ---> Counter clock wise rotation
+# - ---> Clock wise rotation
+rotated = rotate(img, 45)
+cv.imshow('Rotated', rotated)
+
+rotated_clockwise = rotate(img, -45)
+cv.imshow('Rotated', rotated_clockwise)
+
+rotated_rotated = rotate(rotated, -45)
+cv.imshow('Rotated Rotated', rotated_rotated)
+
 cv.waitKey(0)
 
