@@ -21,7 +21,13 @@ lab = cv.cvtColor(img, cv.COLOR_RGB2LAB)
 cv.imshow('LAB', lab)
 
 # BGR to RGB
-rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+rgb = cv.cvtColor(img, cv.COLOR_HSV2BGR)
 cv.imshow('RGB', rgb)
+
+# Reverse
+
+# HSV to BGR
+hsv_bgr = cv.cvtColor(hsv, cv.COLOR_HSV2BGR)
+cv.imshow('HSV ---> BGR', hsv_bgr)
 
 cv.waitKey(0)
