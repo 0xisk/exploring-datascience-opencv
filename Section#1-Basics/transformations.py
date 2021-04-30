@@ -45,5 +45,9 @@ cv.imshow('Rotated', rotated_clockwise)
 rotated_rotated = rotate(rotated, -45)
 cv.imshow('Rotated Rotated', rotated_rotated)
 
+# Resizing
+resized = cv.resize(img, (500, 500), interpolation=cv.INTER_AREA)
+cv.imshow('Resized', resized)
+
 cv.waitKey(0)
 
