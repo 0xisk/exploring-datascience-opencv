@@ -19,5 +19,8 @@ def translate(img, x, y):
 translated = translate(img, 100, 100)
 cv.imshow('Translated', translated)
 
+translated = translate(img, -100, 100)
+cv.imshow('Translated', translated)
+
 cv.waitKey(0)
 
