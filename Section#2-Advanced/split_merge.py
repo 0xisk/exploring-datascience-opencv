@@ -4,10 +4,17 @@ import numpy as np
 img = cv.imread("./Resources/Photos/0003.jpeg")
 cv.imshow('Weirdo', img)
 
+blank = np.zeros(img.shape[:2], dtype='uint8')
+
 b, g, r = cv.split(img)
-cv.imshow('Blue', b)
-cv.imshow('Red', r)
-cv.imshow('Green', g)
+
+blue = cv.merge([b, blank, blank])
+green = cv.merge([blank, g, blank])
+red = cv.merge([blank, blank, r])
+
+cv.imshow('Blue', blue)
+cv.imshow('Red', red)
+cv.imshow('Green', green)
 
 print(img.shape)
 print(b.shape)
@@ -15,6 +22,6 @@ print(g.shape)
 print(r.shape)
 
 merged = cv.merge([b, g, r])
-cv.imshow('Merged', merged)
+#cv.imshow('Merged', merged)
 
 cv.waitKey(0)
