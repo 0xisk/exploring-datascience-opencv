@@ -21,4 +21,8 @@ cv.imshow("Bitwise OR", bitwise_or)
 bitwise_xor = cv.bitwise_xor(rectangle, circle)
 cv.imshow("Bitwise XOR", bitwise_xor)
 
+# Bitwise NOT
+bitwise_not = cv.bitwise_not(rectangle)
+cv.imshow("Rectangle NOT", bitwise_not)
+
 cv.waitKey(0)
