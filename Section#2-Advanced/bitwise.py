@@ -9,4 +9,8 @@ circle = cv.circle(blank.copy(), (200, 200), 200, 255, -1)
 cv.imshow('Rectangle', rectangle)
 cv.imshow('Circle', circle)
 
+# Bitwise AND
+bitwise_and = cv.bitwise_and(rectangle, circle)
+cv.imshow("Bitwise AND", bitwise_and)
+
 cv.waitKey(0)
